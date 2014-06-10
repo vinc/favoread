@@ -8,6 +8,14 @@ GIT
       origin (~> 2.1)
       tzinfo (>= 0.3.37)
 
+GIT
+  remote: git://github.com/plataformatec/simple_form.git
+  revision: 122ac3b252f6d953c5e4e4856b95a63e6fd83f5a
+  specs:
+    simple_form (3.1.0.rc1)
+      actionpack (~> 4.0)
+      activemodel (~> 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -140,6 +148,7 @@ DEPENDENCIES
   rails (= 4.1.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
+  simple_form!
   spring
   turbolinks
   uglifier (>= 1.3.0)
