@@ -41,3 +41,5 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bootstrap-sass'
 
 gem 'simple_form', github: 'plataformatec/simple_form'
+
+gem 'omniauth-twitter'
