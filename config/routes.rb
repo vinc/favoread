@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  resources :tweets, path: :favorites, only: :index do
+    collection do
+      get 'refresh'
+    end
+  end
+
   get '/profile', to: 'profiles#edit'
   put '/profile', to: 'profiles#update'
   patch '/profile', to: 'profiles#update'

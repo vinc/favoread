@@ -28,6 +28,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><%= link_to 'Profile', profile_path %></li>
+                  <li><%= link_to 'Favorites', tweets_path %></li>
                   <li class="divider"></li>
                   <li><%= link_to 'Disconnect', disconnect_path %></li>
                 </ul>
@@ -41,6 +42,9 @@
     </nav>
 
     <div class="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{name.to_s == 'notice' ? 'success' : 'danger'}" %>
+      <% end %>
       <%= yield %>
     </div>
   </body>

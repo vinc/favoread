@@ -1,0 +1,11 @@
+<% tweets.each do |tweet| %>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= tweet.text %>
+    </div>
+  </div>
+<% end %>
+
+<p class="text-center">
+  <%= link_to 'Refresh', refresh_tweets_path, class: 'btn btn-primary', role: 'button' %>
+</p>
