@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
+
+  get '/profile', to: 'profiles#edit'
+  put '/profile', to: 'profiles#update'
+  patch '/profile', to: 'profiles#update'
+
+  get '/connect', to: redirect('/auth/twitter')
+  get '/disconnect', to: 'sessions#destroy'
+  get '/auth/:provider/callback', to: 'sessions#create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,10 @@
+<div class="jumbotron">
+  <h2 class="text-center">Welcome to Favoread</h2>
+  <% unless current_user %>
+    <p class="text-center">
+      <%= link_to(connect_path, class: 'btn btn-success btn-lg', role: 'button') do %>
+        <span class="glyphicon glyphicon-user"></span> Connect
+      <% end %>
+    </p>
+  <% end %>
+</div>
