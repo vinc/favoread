@@ -49,6 +49,8 @@ gem 'decent_exposure'
 
 gem 'twitter'
 
+gem 'rails_autolink'
+
 group :production do
   gem 'rails_12factor'
 end

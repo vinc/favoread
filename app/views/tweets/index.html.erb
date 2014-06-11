@@ -1,7 +1,7 @@
 <% tweets.each do |tweet| %>
   <div class="panel panel-default">
     <div class="panel-body">
-      <%= tweet.text %>
+      <%= auto_link(tweet.text) %>
     </div>
   </div>
 <% end %>
