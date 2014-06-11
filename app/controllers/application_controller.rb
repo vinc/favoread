@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    user_id = session[:user_id]['$oid']
+    user_id = session[:user_id]
     @current_user ||= User.where(id: user_id).first if user_id
   end
 
