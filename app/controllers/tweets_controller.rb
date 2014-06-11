@@ -1,6 +1,4 @@
-class TweetsController < ApplicationController
-  before_filter :require_login
-
+class TweetsController < LoggedController
   expose(:tweet)
   expose(:tweets) { current_user.tweets }
 

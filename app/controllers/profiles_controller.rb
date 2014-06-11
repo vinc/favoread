@@ -1,6 +1,4 @@
-class ProfilesController < ApplicationController
-  before_filter :require_login
-
+class ProfilesController < LoggedController
   expose(:user, attributes: :user_params) { current_user }
 
   def update
