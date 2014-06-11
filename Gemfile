@@ -51,6 +51,8 @@ gem 'twitter'
 
 gem 'rails_autolink'
 
+gem 'responders'
+
 group :production do
   gem 'rails_12factor'
 end

@@ -6,8 +6,6 @@ class TweetsController < LoggedController
   end
 
   def refresh
-    Tweet.refresh(current_user)
-    flash[:notice] = 'Successfully refreshed.'
-    redirect_to tweets_path
+    respond_with Tweet.refresh(current_user), location: tweets_path
   end
 end

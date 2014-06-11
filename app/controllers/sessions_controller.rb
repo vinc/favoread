@@ -10,9 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
-    flash[:notice] = 'You have been successfully deconnected.'
-    redirect_to root_path
+    respond_with reset_session, location: root_path
   end
 
   protected
