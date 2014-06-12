@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
+  responders :flash
+  respond_to :html, :xml, :json
+
   protected
 
   def require_login

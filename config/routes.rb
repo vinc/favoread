@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :tweets, path: :favorites, only: :index do
     collection do
-      get 'refresh'
+      post 'refresh'
     end
   end
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   patch '/profile', to: 'profiles#update'
 
   get '/connect', to: redirect('/auth/twitter')
-  get '/disconnect', to: 'sessions#destroy'
+  delete '/disconnect', to: 'sessions#destroy'
   get '/auth/:provider/callback', to: 'sessions#create'
 
   # The priority is based upon order of creation: first created -> highest priority.

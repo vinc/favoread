@@ -1,6 +1,4 @@
-class TweetsController < ApplicationController
-  before_filter :require_login
-
+class TweetsController < LoggedController
   expose(:tweet)
   expose(:tweets) { current_user.tweets }
 
@@ -8,8 +6,6 @@ class TweetsController < ApplicationController
   end
 
   def refresh
-    Tweet.refresh(current_user)
-    flash[:notice] = 'Successfully refreshed.'
-    redirect_to tweets_path
+    respond_with Tweet.refresh(current_user), location: tweets_path
   end
 end

@@ -30,7 +30,7 @@
                   <li><%= link_to 'Profile', profile_path %></li>
                   <li><%= link_to 'Favorites', tweets_path %></li>
                   <li class="divider"></li>
-                  <li><%= link_to 'Disconnect', disconnect_path %></li>
+                  <li><%= link_to 'Disconnect', disconnect_path, method: :delete %></li>
                 </ul>
               </li>
             <% else %>
