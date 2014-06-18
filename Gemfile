@@ -37,7 +37,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mongoid', github: 'mongoid/mongoid'
+gem 'mongoid', '~> 4.0.0.rc2'
 
 gem 'bootstrap-sass'
 
@@ -55,9 +55,11 @@ gem 'responders'
 
 group :production do
   gem 'rails_12factor'
+  gem 'passenger'
 end
 
 group :development, :test do
+  gem 'thin'
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
