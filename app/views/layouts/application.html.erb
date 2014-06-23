@@ -34,7 +34,7 @@
                 </ul>
               </li>
             <% else %>
-              <li><%= link_to 'Connect', connect_path(origin: request.fullpath) %></li>
+              <li><%= link_to 'Connect', connect_path("twitter", origin: request.fullpath) %></li>
             <% end %>
           </ul>
         </div><!-- /.navbar-collapse -->
